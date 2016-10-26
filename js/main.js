@@ -1,6 +1,6 @@
 function validateForm(){
 		var nombre = document.getElementById("name").value;
-if(nombre.length == 0) {
+if( nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
 	alert ("Debe ingresar su nombre");
   return false;
 }
@@ -24,7 +24,7 @@ function validarMayus (name){
 	}
 }
 	var apellido = document.getElementById("lastname").value;
-if (apellido.length == 0){
+if (apellido ==null || apellido.length == 0 || /^\s+$/.test(apellido)){
 	alert ("debe ingresar Apellido");
 	return false;
 }
